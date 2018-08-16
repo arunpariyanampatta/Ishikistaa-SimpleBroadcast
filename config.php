@@ -7,5 +7,5 @@ define('DB_PASSWORD','Ku2ZbNHdcALZfz2P@');
 define('DB_CONSUMER_USER','tigo_consumer');
 define('DB','tigo_sms_broadcast');
 define('WORKER',10);
-
+$worker = WORKER;
 
