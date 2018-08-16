@@ -28,7 +28,7 @@ if(isset($_POST['ProcessType'])) {
 if($process=="Consume") {
         
         
-            shell_exec("");
+            shell_exec("sh StartWorker.sh");
            
        exit;     
     }
