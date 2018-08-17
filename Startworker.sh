@@ -6,4 +6,4 @@ for ((i = 0;i < "$val";i++))
 do
 php TriviaConsumer.php &
 done
-echo All Consumers Started
+echo All "$val"  Wokers  Started
