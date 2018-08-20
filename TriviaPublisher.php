@@ -3,6 +3,7 @@ set_time_limit(0);
 ini_set('memory_limit', '-1');
 require_once __DIR__ . '/vendor/autoload.php';
 require_once 'config.php';
+require_once 'content-config.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 $i = 0;
@@ -13,7 +14,7 @@ while(true){
 $connection = new AMQPStreamConnection('localhost', 5672, 'arun', 'aruntest123');
 $channel = $connection->channel();	
 $conn = connectDB();
-$table = "tbl_trivia_subscribers_".date("Ymd");
+$table = TABLE;
 $sql = "SELECT ID,MSISDN  from ".$table." WHERE ID > ".$id." AND MSISDN <> '255713123200'   ORDER BY ID ASC LIMIT 200";
 $result = mysqli_query($conn,$sql);
 $brodcast = array();

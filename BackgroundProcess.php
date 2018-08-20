@@ -20,16 +20,17 @@ if(isset($_POST['ProcessType'])) {
             $senderID = $_POST['senderID'];
             $message = $_POST['message'];
             $msgs_published = 1;
-            file_put_contents("content-config.php", "<?php define('CONTENT','" . $message . "');");
-            shell_exec("php TriviaPublisher.php &");
+           file_put_contents("content-config.php", "<?php
+define('CONTENT','" . $message . "');  
+define('TABLE','" . $table_name . "');  ");
+shell_exec("php TriviaPublisher.php &");
         }
         exit;
     }
 if($process=="Consume") {
         
         
-            shell_exec("sh StartWorker.sh");
-           
+    shell_exec("sh StartWorker.sh");
        exit;     
     }
     elseif($process=="QueueCheck"){
