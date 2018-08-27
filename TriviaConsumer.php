@@ -311,9 +311,9 @@ $url =  "https://tigo.timwe.com/tz/ma/api/external/v1/sms/mt/645";
 
 function insert_record($sms,$msisdn,$response){
 $conn = connect_db();
-$sql = "INSERT INTO tigo_brodcast_logs (`MSISDN`,`SMS`,`response`)VALUES ('".$msisdn."','".$sms."','".$response."')";
+$table = "tigo_broadcast_logs_".date("Ymd");
+$sql = "INSERT INTO `".$table."` (`MSISDN`,`SMS`,`response`)VALUES ('".$msisdn."','".$sms."','".$response."')";
 mysqli_query($conn,$sql);
-
 mysqli_close($conn);
 }
 
