@@ -1,1 +1,3 @@
-<?php define('CONTENT','Upeipata hii? Tsh 10M kwa mara nyingine. Tsh 1M na Simujanja kila wiki, LED TV kila mwezi na Tsh 100,000 KILA SIKU.Jibu ujumbe kwa neno SOKA. Sh 70/SMS');
+<?php
+define('CONTENT','Nafasi mpya ya ushindi kwako!Shinda hadi Tsh 10M. Simujanja na Tsh 1M kila wiki na Tsh 100k kila siku. LED TV kila mwezi. Jibu ujumbe kwa neno SOKA. Tsh 70/SMS');  
+define('TABLE','tbl_trivia_promotion_20180823');  

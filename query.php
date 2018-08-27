@@ -14,6 +14,10 @@ $tables  = array();
 
     }
 
+    function insert_subscribers($conn, $sql){
+        mysqli_query($conn, $sql, MYSQLI_STORE_RESULT);
+    }
+
 
 function connect_db()
 {

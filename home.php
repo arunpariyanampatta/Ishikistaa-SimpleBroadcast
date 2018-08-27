@@ -260,6 +260,14 @@ if (!isset($_SESSION['loginuser'])) {
 							</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="subscribers_upload.php" class="nav-link">
+                            <i class="icon-home4"></i>
+                            <span>
+									Subscribers upload
+							</span>
+                        </a>
+                    </li>
                     <!--<li class="nav-item nav-item-submenu">
                         <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Configuration</span></a>
                         <ul class="nav nav-group-sub" data-submenu-title="Configuration">
