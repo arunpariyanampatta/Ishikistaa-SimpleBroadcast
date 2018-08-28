@@ -17,16 +17,16 @@ $channel8 = $connection->channel();
 $channel9 = $connection->channel();
 $channel10 = $connection->channel();
 
-$channel11 =$connection->channel();
-$channel12 = $connection->channel();
-$channel13 = $connection->channel();
-$channel14 = $connection->channel();
-$channel15 = $connection->channel();
-$channel16 = $connection->channel();
-$channel17 = $connection->channel();
-$channel18 = $connection->channel();
-$channel19 = $connection->channel();
-$channel20 = $connection->channel();
+//$channel11 =$connection->channel();
+//$channel12 = $connection->channel();
+//$channel13 = $connection->channel();
+//$channel14 = $connection->channel();
+//$channel15 = $connection->channel();
+//$channel16 = $connection->channel();
+//$channel17 = $connection->channel();
+//$channel18 = $connection->channel();
+//$channel19 = $connection->channel();
+//$channel20 = $connection->channel();
 
 
 echo " [*] Waiting for messages. To exit press CTRL+C \n";
@@ -86,51 +86,51 @@ $msg->delivery_info['channel']->basic_ack($msg->delivery_info['delivery_tag']);
      $channel10->basic_qos(null,QOS_LIMIT,null);
      $channel10->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
      
-     $channel11->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel->basic_qos(null,QOS_LIMIT,null);
-     $channel->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-       
-     
-     $channel12->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel12->basic_qos(null,QOS_LIMIT,null);
-     $channel12->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
-     $channel13->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel13->basic_qos(null,QOS_LIMIT,null);
-     $channel13->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
-     $channel14->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel14->basic_qos(null,QOS_LIMIT,null);
-     $channel14->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-
-     $channel15->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel15->basic_qos(null,QOS_LIMIT,null);
-     $channel15->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
-     $channel16->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel16->basic_qos(null,QOS_LIMIT,null);
-     $channel16->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
-     
-     $channel17->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel17->basic_qos(null,QOS_LIMIT,null);
-     $channel17->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
-     
-     
-     $channel18->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel18->basic_qos(null,QOS_LIMIT,null);
-     $channel18->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
-     $channel19->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel19->basic_qos(null,QOS_LIMIT,null);
-     $channel19->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
-     
-     $channel20->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
-     $channel20->basic_qos(null,QOS_LIMIT,null);
-     $channel20->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
-     
+//     $channel11->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel->basic_qos(null,QOS_LIMIT,null);
+//     $channel->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//       
+//     
+//     $channel12->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel12->basic_qos(null,QOS_LIMIT,null);
+//     $channel12->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
+//     $channel13->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel13->basic_qos(null,QOS_LIMIT,null);
+//     $channel13->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
+//     $channel14->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel14->basic_qos(null,QOS_LIMIT,null);
+//     $channel14->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//
+//     $channel15->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel15->basic_qos(null,QOS_LIMIT,null);
+//     $channel15->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
+//     $channel16->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel16->basic_qos(null,QOS_LIMIT,null);
+//     $channel16->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
+//     
+//     $channel17->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel17->basic_qos(null,QOS_LIMIT,null);
+//     $channel17->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
+//     
+//     
+//     $channel18->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel18->basic_qos(null,QOS_LIMIT,null);
+//     $channel18->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
+//     $channel19->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel19->basic_qos(null,QOS_LIMIT,null);
+//     $channel19->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
+//     
+//     $channel20->queue_declare('tigo_trivia_broadcast', false, true, false, false);//Second Element Should be true to make it durable so that we don't lose our queue
+//     $channel20->basic_qos(null,QOS_LIMIT,null);
+//     $channel20->basic_consume('tigo_trivia_broadcast', '', false, false, false, false, $callback); // auto ack is false
+//     
         
 while (count($channel->callbacks)) {
     $channel->wait();
@@ -193,66 +193,66 @@ while (count($channel10->callbacks)) {
 
 $channel10->close();
 
-while (count($channel11->callbacks)) {
-    $channel11->wait();
-}
-
-$channel11->close();
-
-
-while (count($channel12->callbacks)) {
-    $channel12->wait();
-}
-
-$channel2->close();
-
-while (count($channel3->callbacks)) {
-    $channel13->wait();
-}
-
-$channel13->close();
-
-while (count($channel14->callbacks)) {
-    $channel14->wait();
-}
-
-$channel14->close();
-
-while (count($channel15->callbacks)) {
-    $channel15->wait();
-}
-
-$channel15->close();
-
-while (count($channel16->callbacks)) {
-    $channel16->wait();
-}
-
-$channel16->close();
-
-while (count($channel17->callbacks)) {
-    $channel17->wait();
-}
-
-$channel7->close();
-
-while (count($channel18->callbacks)) {
-    $channel18->wait();
-}
-
-$channel18->close();
-
-while (count($channel19->callbacks)) {
-    $channel19->wait();
-}
-
-$channel19->close();
-
-while (count($channel20->callbacks)) {
-    $channel20->wait();
-}
-
-$channel20->close();
+//while (count($channel11->callbacks)) {
+//    $channel11->wait();
+//}
+//
+//$channel11->close();
+//
+//
+//while (count($channel12->callbacks)) {
+//    $channel12->wait();
+//}
+//
+//$channel2->close();
+//
+//while (count($channel3->callbacks)) {
+//    $channel13->wait();
+//}
+//
+//$channel13->close();
+//
+//while (count($channel14->callbacks)) {
+//    $channel14->wait();
+//}
+//
+//$channel14->close();
+//
+//while (count($channel15->callbacks)) {
+//    $channel15->wait();
+//}
+//
+//$channel15->close();
+//
+//while (count($channel16->callbacks)) {
+//    $channel16->wait();
+//}
+//
+//$channel16->close();
+//
+//while (count($channel17->callbacks)) {
+//    $channel17->wait();
+//}
+//
+//$channel7->close();
+//
+//while (count($channel18->callbacks)) {
+//    $channel18->wait();
+//}
+//
+//$channel18->close();
+//
+//while (count($channel19->callbacks)) {
+//    $channel19->wait();
+//}
+//
+//$channel19->close();
+//
+//while (count($channel20->callbacks)) {
+//    $channel20->wait();
+//}
+//
+//$channel20->close();
 
 
 
