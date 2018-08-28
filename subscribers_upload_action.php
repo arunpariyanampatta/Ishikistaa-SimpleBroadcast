@@ -12,17 +12,17 @@ if(isset($_FILES['file']['name'])) {
         $con = connect_db();
         $table = "tbl_trivia_promotion_".date("Ymd");
         $query = "LOAD DATA LOCAL INFILE '".$file."' INTO TABLE `".$table."`  FIELDS TERMINATED BY ','  LINES TERMINATED BY '".'\n'. "' (MSISDN) SET ID = NULL";
-        mysqli_query($con, $query);
+        $result = mysqli_query($con, $query);
+        
+        $n = $result->affected_rows;
+        
+        mysqli_close($con);
+        unlink($path);
+        header("Location: subscribers_upload.php?uploaded=1&msisdn_nm=".$n);
 }
-    function connect_db(){
-        $user = FILE_USER;
-        $pass = FILE_PASSWORD;
-        $db = DB;
-        mysqli_connect(DB_HOST,$user,$pass,$db);
-
-    }
+   
 
 
 }
 
-header("Location: subscribers_upload.php?uploaded=1");
+

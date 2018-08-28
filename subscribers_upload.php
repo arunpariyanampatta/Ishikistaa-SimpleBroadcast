@@ -17,7 +17,7 @@ $uploaded = 0;
 $msisdn_nm = 0;
 if(isset($_GET['uploaded']) && isset($_GET['msisdn_nm'])){
     $uploaded = $_GET['uploaded'];
-//    $msisdn_nm = $_GET['msisdn_nm'];
+    $msisdn_nm = $_GET['msisdn_nm'];
 }
 ?>
 
