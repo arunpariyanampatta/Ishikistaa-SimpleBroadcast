@@ -17,7 +17,7 @@ $uploaded = 0;
 $msisdn_nm = 0;
 if(isset($_GET['uploaded']) && isset($_GET['msisdn_nm'])){
     $uploaded = $_GET['uploaded'];
-    $msisdn_nm = $_GET['msisdn_nm'];
+//    $msisdn_nm = $_GET['msisdn_nm'];
 }
 ?>
 
@@ -248,7 +248,7 @@ if(isset($_GET['uploaded']) && isset($_GET['msisdn_nm'])){
                                                 <h6 class="card-title"><span class="no-of-workers-span">SUBSCRIBERS UPLOAD</span></h6>
                                             </div>
 
-                                            <form action="subscribers_upload_action.php" method="post" enctype="multipart/form-data">
+                                            <form action="subscribers_upload_action.php" method="POST" enctype="multipart/form-data">
                                                 Select file to upload:
                                                 <input type="file" name="file" id="fileToUpload">
                                                 <input type="submit" value="Upload File" name="submit">

@@ -15,7 +15,7 @@ $connection = new AMQPStreamConnection('localhost', 5672, 'arun', 'aruntest123')
 $channel = $connection->channel();	
 $conn = connectDB();
 $table = TABLE;
-$sql = "SELECT ID,MSISDN  from ".$table." WHERE ID > ".$id." AND MSISDN <> '255713123200'   ORDER BY ID ASC LIMIT 200";
+$sql = "SELECT SUB_ID,MSISDN  from ".$table." WHERE SUB_ID > ".$id."  AND DND_STATUS = '0' AND ACTIVITY_STATUS = 'ACTIVE'  ORDER BY SUB_ID ASC LIMIT 200";
 $result = mysqli_query($conn,$sql);
 $brodcast = array();
 while($row = mysqli_fetch_array($result)){
@@ -27,7 +27,7 @@ exit;
 else{
 $channel->queue_declare('tigo_trivia_broadcast', false, true, false, false);
 $max_id = end($brodcast);
-$id = $max_id['ID'];
+$id = $max_id['SUB_ID'];
 for($j=0;$j<sizeof($brodcast);$j++){
 $str['MSISDN'] = $brodcast[$j]['MSISDN'];
 $msg = new AMQPMessage(json_encode($str));

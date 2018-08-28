@@ -1,6 +1,6 @@
 <?php
 
-$table = date("Ymd");
+$table = date("Ymd",strtotime("+1 DAY"));
 
 $sql = " CREATE TABLE `tigo_broadcast_logs_".$table."` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,

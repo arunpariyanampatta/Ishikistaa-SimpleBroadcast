@@ -314,6 +314,7 @@ $conn = connect_db();
 $table = "tigo_broadcast_logs_".date("Ymd");
 $sql = "INSERT INTO `".$table."` (`MSISDN`,`SMS`,`response`)VALUES ('".$msisdn."','".$sms."','".$response."')";
 mysqli_query($conn,$sql);
+
 mysqli_close($conn);
 }
 
