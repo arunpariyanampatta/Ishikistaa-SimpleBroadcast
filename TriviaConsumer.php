@@ -33,11 +33,25 @@ echo " [*] Waiting for messages. To exit press CTRL+C \n";
 $callback = function ($msg) {
 $message =  json_decode($msg->body,TRUE);
 $mobile 	=  $message['MSISDN'];
+//if($mobile=="00"){
+//    $msg->delivery_info['channel']->basic_ack($msg->delivery_info['delivery_tag']);
+//    shell_exec('pkill -f "TriviaConsumer.php"');
+//}
+try{
 $deliveryState = brodcastSMS($mobile);
+
+
+
 if($deliveryState){
 $msg->delivery_info['channel']->basic_ack($msg->delivery_info['delivery_tag']);
 }
-
+else{
+    $msg->delivery_info['channel']->basic_nack($msg->delivery_info['delivery_tag']);
+}
+}
+catch(Exception $ex){
+    $msg->delivery_info['channel']->basic_nack($msg->delivery_info['delivery_tag']);
+}
 };
 
  
